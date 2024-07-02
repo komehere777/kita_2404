@@ -8,7 +8,7 @@ from wtforms.validators import DataRequired  #폼 규제사항을 정의
 app = Flask(__name__)
 #이부분은 config.py로 따로 빼서 관리하는게 좋음
 #secret_key 설정, 하나 하나 만들어 보는 재미가...
-app.config['SECRET_KEY'] = '8f1272cd68dd18faecc9a4d45768c6afe6d03f49ecdb5cd2'
+app.config['SECRET_KEY'] = ''
 #db 설정, sqlite 사용, 다른 db 사용시 붙여넣기 후 수정
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///example.db'
 #db 수정사항 추적 안함
