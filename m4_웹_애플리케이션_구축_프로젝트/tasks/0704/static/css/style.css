@@ -1,0 +1,199 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, sans-serif;
+    margin: 20;
+    padding: 20;
+    background-color: #8b899c;
+}
+
+h1 {
+    max-width: 400px;
+    color: #13361f;
+    font-size: 3.5em;    
+    text-align: center;
+    background: #cccee3;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+form {
+    /* 크기 조절  */
+    max-width: 600px;
+    margin: 20px auto;
+    margin-bottom: 20px;
+    background: #cccee3;
+    padding: 20px;
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    font-size: larger;
+    font-weight: bold;
+    margin-left: 10px;
+    color: #275f2b;
+}
+
+input[type="text"]{
+        width: 97%;
+        height: 30px;
+        padding: 8px;
+        font-size: 30px;
+        margin: 10px 0px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+input[type="date"],
+textarea {
+    /* 부모요소 p의 100% */
+    width: 97%;
+    padding: 8px;
+    font-size: 20px;
+    margin: 10px 0px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+
+/* 타입이 여러개는 []로 구분 선택 */
+input[type="submit"] {
+    background: #5aa874;
+    color: #fff;
+    /* 패딩: 앞부분은 상하, 뒷부분은 좌우 */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background: #3e8e5e;
+}
+
+li {
+    font-size: large;
+    max-width: 600px;
+    /* li ::marker 삭제 */
+    list-style: none;
+    margin: 20px auto;
+    background: #cccee3;
+    margin: 10px 0;
+    padding: 20px;
+    border-radius: 5px;
+    /* 수평 및 수직 이동없이 요소 주위에 부드럽고 퍼진 매우 옅은 검은색 그림자 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+ul{
+    padding: 0;
+
+}
+
+ul#task-list {
+    max-width: 550px;
+    margin: 20px auto;
+    margin-bottom: 20px;
+    /* background: #fff; */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+a {
+    font-size: 15px;
+    margin-left: 20px;
+    color: #3105d1;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+/* 클래스 이름은 관련되는 이름을 써야 알아 보기 쉽다. */
+.centered {
+    text-align: center;
+}
+
+p {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #275f2b;
+}
+/* 인라인 우선 */
+.custom-link {
+    color: rgb(40, 16, 104);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+#li_title {
+    font-size: 2em;
+    text-align: center;
+    margin-left: 20;
+    font-weight: bold;
+    color: #275f2b;
+}
+
+.list_title {
+    text-align: center;
+    padding: 0 0 1px 0;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #0f3844;
+}
+
+.list_date {
+    text-align: right;
+    font-size: 0.5em;
+    color: #020e03;
+}
+
+#due_date {
+    max-width: 150px;
+}
+
+.btn-primary{
+    margin-right: auto;
+    background-color: #5aa874;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-danger{
+    margin-left: auto;
+    background-color: #d9534f;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#list_card{
+    max-width: 400px;
+    margin: 20px auto;
+    margin-bottom: 20px;
+    background: #777caa;
+    padding: 10px;
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#list_card_contents{
+    max-width: 350px;
+    margin: 10px auto;
+    margin-bottom: 20px;
+    background: #cccee3;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
