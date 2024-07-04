@@ -1,0 +1,98 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, sans-serif;
+    margin: 20;
+    padding: 20;
+    background-color: #8b899c;
+}
+
+h1 {
+    color: #13361f;
+    /* 중앙정렬 */
+    text-align: center;
+}
+
+form {
+    /* 크기 조절  */
+    max-width: 600px;
+    margin: 20px auto;
+    margin-bottom: 20px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    font-weight: bold;
+    color: #275f2b;
+}
+
+input[type="text"],
+input[type="date"],
+textarea {
+    /* 부모요소 p의 100% */
+    width: 97%;
+    padding: 8px;
+    margin: 10px 0px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* 타입이 여러개는 []로 구분 선택 */
+input[type="submit"] {
+    background: #5aa874;
+    color: #fff;
+    /* 패딩: 앞부분은 상하, 뒷부분은 좌우 */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background: #3e8e5e;
+}
+
+li {
+    /* 센터이동 */
+    /* text-align: center; */
+
+    max-width: 600px;
+    /* li ::marker 삭제 */
+    list-style: none;
+    margin: 20px auto;
+    background: #fff;
+    margin: 10px 0;
+    padding: 20px;
+    border-radius: 5px;
+    /* 수평 및 수직 이동없이 요소 주위에 부드럽고 퍼진 매우 옅은 검은색 그림자 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+ul{
+    padding: 0;
+
+}
+
+ul#task-list {
+    max-width: 550px;
+    margin: 20px auto;
+    margin-bottom: 20px;
+    /* background: #fff; */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+a {
+    size: 5px;
+    margin-left: 10px;
+    color: #3105d1;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
