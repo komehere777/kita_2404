@@ -1,0 +1,14 @@
+{% extends "base.html" %} 
+{% block title %}Admin Analysis{% endblock %} 
+{% block header %}Admin Analysis{% endblock %} 
+{% block content %}
+{% for ua in user_analysis %}
+  <li class="list-group-item">
+    이름: <strong>{{ ua.username }}</strong><br />
+    총 과제 수: {{ ua.total_tasks }}<br />
+    준수일: {{ ua.tasks_on_time }}<br />
+    미준수일: {{ ua.tasks_overdue }}<br />
+    납기준수율: {{ ua.compliance_rate }}<br />
+  </li>
+  {% endfor %}
+{% endblock %}
