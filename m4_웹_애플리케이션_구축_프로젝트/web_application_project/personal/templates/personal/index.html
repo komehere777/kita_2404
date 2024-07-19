@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block title %}User Profile{% endblock %}
+
+{% block content %}
+<style>
+        th {
+            text-align: center;
+        }
+    </style>
+<h1>User Profile</h1>
+<table class="table table-striped">
+    <tr>
+        <th>Username</th>
+        <td>{{ user.username }}</td>
+    </tr>
+    <tr>
+        <th>Email</th>
+        <td>{{ user.email }}</td>
+    </tr>
+</table>
+<a href="{{ url_for('personal.edit_user') }}" class="btn btn-primary">Edit Profile</a><br>
+<br>
+<h2>Wishlist</h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>제품명</th>
+            <th>가격</th>
+            <th>사진</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        {% for item in wishlist_items %}
+        <tr>
+            <td>{{ item.product.NAME }}</td>
+            <td>{{ item.product.PRICE }}</td>
+            <td><img src="{{ item.product.PRODUCT_IMAGE }}" alt="Product Image" width="100"></td>
+            
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}
