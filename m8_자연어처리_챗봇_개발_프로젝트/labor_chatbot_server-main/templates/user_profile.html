@@ -1,0 +1,83 @@
+{% extends "login_base.html" %}
+
+{% block title %}User Profile{% endblock %}
+
+{% block content %}
+
+<style>
+    body {
+        background-color: #3c3c3c; /* 전체 웹페이지 배경을 #1E1E1E로 설정 */
+        color: #ffffff; /* 기본 텍스트 색상을 흰색으로 설정 */
+    }
+    .card {
+        background-color: #3c3c3c; /* 카드 배경 색상도 #1E1E1E로 설정 */
+        color: #ffffff; /* 카드 내부 글씨 색상 흰색으로 설정 */
+        border: 1px solid #ffffff; /* 카드에 흰색 테두리 추가 */
+        border-radius: 8px; /* 테두리의 모서리를 둥글게 설정 */
+    }
+    .modal-content {
+        background-color: #3c3c3c; /* 모달의 배경색도 동일하게 설정 */
+        color: #ffffff; /* 모달의 텍스트 색상 흰색으로 설정 */
+    }
+</style>
+
+<div class="flex-grow-1 p-3" style="background-color: #f8f9fa;">
+    <div class="container">
+        <h2 class="mb-4">User Profile</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Edit Profile</h5>
+                        <form method="POST">
+                            {{ form.hidden_tag() }}
+                            <div class="mb-3">
+                                {{ form.username.label(class="form-label") }}
+                                {{ form.username(class="form-control") }}
+                            </div>
+                            <div class="mb-3">
+                                {{ form.email.label(class="form-label") }}
+                                {{ form.email(class="form-control") }}
+                            </div>
+                            {{ form.submit(class="btn btn-primary") }}
+                            <a href="{{ url_for('chat') }}" class="btn btn-secondary">Home</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Profile Information</h5>
+                        <p><strong>Username:</strong> {{ current_user.username }}</p>
+                        <p><strong>Email:</strong> {{ current_user.email }}</p>
+                    </div>
+                </div>
+                <div class="d-grid">
+                    <button class="btn btn-danger" type="button" data-bs-toggle="modal" data-bs-target="#deleteAccountModal">계정 삭제</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="deleteAccountModal" tabindex="-1" aria-labelledby="deleteAccountModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="deleteAccountModalLabel">계정 삭제 확인</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                정말로 계정을 삭제하시겠습니까? 이 작업은 되돌릴 수 없습니다.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">취소</button>
+                <form action="{{ url_for('delete_account') }}" method="POST">
+                    <button type="submit" class="btn btn-danger">계정 삭제</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
